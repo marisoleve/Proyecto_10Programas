@@ -3,6 +3,11 @@
 #include "Floyd.h"
 #include "PilasColas.h"
 #include "ColaImpresion.h"
+#include "Hash.h"
+#include "ListaSimple.h"
+#include "ListaDoble.h"
+#include "ListaInverza.h"
+#include "Recursividad.h"
 
 
 int menuPrincipal(const char *titulo, const char *opciones[], int n) {
@@ -86,7 +91,8 @@ int main() {
 	const char *titulo = "MENU PRINCIPAL";
 	const char *opciones[] = { "Arbol Binario de Busqueda", "Arbol Balanceado",
 		"Algoritmo de Floyd - Warshall", "Abecedario Aleatorio (Pilas y Colas)",
-		"Control de Impresion", " ", " ", " ", " ", " ", "Salir" };
+		"Control de Impresion", "Tablas Hash", "Lista Simplemente Enlazada", 
+		"Lista Doblemente Enlazada", "Lista Inverza", "Recursividad (Potencia de un numero)", "Salir" };
 	int n = 11; //Numero de opciones 
 
 	do {
@@ -111,14 +117,19 @@ int main() {
 			mainCola();
 			break;
 		case 6:
+			mainHash();
 			break;
 		case 7:
+			mainLSimple();
 			break;
 		case 8:
+			mainLDoble();
 			break;
 		case 9:
+			mainLInv();
 			break;
 		case 10:
+			mainRec();
 			break;
 		case 11:
 			exit(0);
